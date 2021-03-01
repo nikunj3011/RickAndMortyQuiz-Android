@@ -35,26 +35,22 @@ class GameFragment : Fragment() {
     // All questions must have four answers.  We'd want these to contain references to string
     // resources so we could internationalize. (Or better yet, don't define the questions in code...)
     private val questions: MutableList<Question> = mutableListOf(
-            Question(text = "What is Android Jetpack?",
-                    answers = listOf("All of these", "Tools", "Documentation", "Libraries")),
-            Question(text = "What is the base class for layouts?",
-                    answers = listOf("ViewGroup", "ViewSet", "ViewCollection", "ViewRoot")),
-            Question(text = "What layout do you use for complex screens?",
-                    answers = listOf("ConstraintLayout", "GridLayout", "LinearLayout", "FrameLayout")),
-            Question(text = "What do you use to push structured data into a layout?",
-                    answers = listOf("Data binding", "Data pushing", "Set text", "An OnClick method")),
-            Question(text = "What method do you use to inflate layouts in fragments?",
-                    answers = listOf("onCreateView()", "onActivityCreated()", "onCreateLayout()", "onInflateLayout()")),
-            Question(text = "What's the build system for Android?",
-                    answers = listOf("Gradle", "Graddle", "Grodle", "Groyle")),
-            Question(text = "Which class do you use to create a vector drawable?",
-                    answers = listOf("VectorDrawable", "AndroidVectorDrawable", "DrawableVector", "AndroidVector")),
-            Question(text = "Which one of these is an Android navigation component?",
-                    answers = listOf("NavController", "NavCentral", "NavMaster", "NavSwitcher")),
-            Question(text = "Which XML element lets you register an activity with the launcher activity?",
-                    answers = listOf("intent-filter", "app-registry", "launcher-registry", "app-launcher")),
-            Question(text = "What do you use to mark a layout for data binding?",
-                    answers = listOf("<layout>", "<binding>", "<data-binding>", "<dbinding>"))
+            Question(text = "The Rick &amp; Morty That The Show Follows Are Originally From Dimension C-173",
+                    answers = listOf("True","False")),
+            Question(text = "Jerry\\'s Station Wagon Is Based On The Car From National Lampoon\\'s Vacation?",
+                    answers = listOf("True","False")),
+            Question(text = "Rick &amp; Morty Have Appeared In The Opening Title Screen Of The Simpsons?",
+                    answers = listOf("True","False")),
+            Question(text = "Jaguar From \\'Pickle Rick\\' Had His Own Spin Off Show With Adult Swim?",
+                    answers = listOf("True","False")),
+            Question(text = "Two Brothers\\' Is The First Show Rick &amp; Morty Watch On Inter-Dimensional Cable?",
+                    answers = listOf("True","False")),
+            Question(text = "According To Dan Harmon, A Schmeckle Is Worth \$148?",
+                    answers = listOf("True","False")),
+            Question(text = "The Bloomflark Is The Universal Currency For The Galactic Federation?",
+                    answers = listOf("True","False")),
+            Question(text = "When Bird-Person Is \\'Reborn\\' He Is Dubbed Phoenix-Bird?",
+                    answers = listOf("True","False"))
     )
 
 
@@ -62,7 +58,7 @@ class GameFragment : Fragment() {
     lateinit var currentQuestion: Question
     lateinit var answers: MutableList<String>
     private var questionIndex = 0
-    private val numQuestions = 1//Math.min((questions.size + 1) / 2, 3)
+    private val numQuestions = 2//Math.min((questions.size + 1) / 2, 3)
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -86,8 +82,6 @@ class GameFragment : Fragment() {
                 var answerIndex = 0
                 when (checkedId) {
                     R.id.secondAnswerRadioButton -> answerIndex = 1
-                    R.id.thirdAnswerRadioButton -> answerIndex = 2
-                    R.id.fourthAnswerRadioButton -> answerIndex = 3
                 }
                 // The first answer in the original question is always the correct one, so if our
                 // answer matches, we have the correct answer.

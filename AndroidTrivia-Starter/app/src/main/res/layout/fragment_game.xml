@@ -102,22 +102,6 @@
                     android:textSize="@dimen/answer_text_size"
                     tools:text="Green" />
 
-                <RadioButton
-                    android:id="@+id/thirdAnswerRadioButton"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/question_vertical_margin"
-                    android:text="@{game.answers[2]}"
-                    android:textSize="@dimen/answer_text_size"
-                    tools:text="Yellow" />
-
-                <RadioButton
-                    android:id="@+id/fourthAnswerRadioButton"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@{game.answers[3]}"
-                    android:textSize="@dimen/answer_text_size"
-                    tools:text="Red" />
             </RadioGroup>
 
             <Button
