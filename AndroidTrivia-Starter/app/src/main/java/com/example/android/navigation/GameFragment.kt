@@ -29,38 +29,58 @@ import com.example.android.navigation.databinding.FragmentGameBinding
 class GameFragment : Fragment() {
     data class Question(
             val text: Int,
-            val answers: Boolean)
+            val answers: List<String>)
 
     // The first answer is the correct one.  We randomize the answers before showing the text.
     // All questions must have four answers.  We'd want these to contain references to string
     // resources so we could internationalize. (Or better yet, don't define the questions in code...)
     private val questions: MutableList<Question> = mutableListOf(
-            Question(R.string.question_1, false),
-            Question(R.string.question_2, true),
-            Question(R.string.question_3, true),
-            Question(R.string.question_4, false),
-            Question(R.string.question_5, false),
-            Question(R.string.question_6, true),
-            Question(R.string.question_7, false),
-            Question(R.string.question_8, true),
-            Question(R.string.question_9, false),
-            Question(R.string.question_10, false),
-            Question(R.string.question_11, false),
-            Question(R.string.question_12, true),
-            Question(R.string.question_13, false),
-            Question(R.string.question_14, true),
-            Question(R.string.question_15, false),
-            Question(R.string.question_16, false),
-            Question(R.string.question_17, true),
-            Question(R.string.question_18, false),
-            Question(R.string.question_19, false),
-            Question(R.string.question_20, true)
+            Question(R.string.question_1,
+                    answers = listOf("True","False")),
+            Question(R.string.question_2,
+                    answers = listOf("True","False")),
+            Question(R.string.question_3,
+                    answers = listOf("True","False")),
+            Question(R.string.question_4,
+                    answers = listOf("True","False")),
+            Question(R.string.question_5,
+                    answers = listOf("True","False")),
+            Question(R.string.question_6,
+                    answers = listOf("True","False")),
+            Question(R.string.question_7,
+                    answers = listOf("True","False")),
+            Question(R.string.question_8,
+                    answers = listOf("True","False")),
+            Question(R.string.question_9,
+                    answers = listOf("True","False")),
+            Question(R.string.question_10,
+                    answers = listOf("True","False")),
+            Question(R.string.question_11,
+                    answers = listOf("True","False")),
+            Question(R.string.question_12,
+                    answers = listOf("True","False")),
+            Question(R.string.question_13,
+                    answers = listOf("True","False")),
+            Question(R.string.question_14,
+                    answers = listOf("True","False")),
+            Question(R.string.question_15,
+                    answers = listOf("True","False")),
+            Question(R.string.question_16,
+                    answers = listOf("True","False")),
+            Question(R.string.question_17,
+                    answers = listOf("True","False")),
+            Question(R.string.question_18,
+                    answers = listOf("True","False")),
+            Question(R.string.question_19,
+                    answers = listOf("True","False")),
+            Question(R.string.question_20,
+                    answers = listOf("True","False"))
     )
 
 
 
     lateinit var currentQuestion: Question
-    lateinit var answers: MutableList<Question>
+    lateinit var answers: MutableList<String>
     private var questionIndex = 0
     private val numQuestions = 2//Math.min((questions.size + 1) / 2, 3)
 
@@ -89,7 +109,7 @@ class GameFragment : Fragment() {
                 }
                 // The first answer in the original question is always the correct one, so if our
                 // answer matches, we have the correct answer.
-                if (true) {
+                if (answers[answerIndex] == currentQuestion.answers[0]) {
                     questionIndex++
                     // Advance to the next question
                     if (questionIndex < numQuestions) {
@@ -121,7 +141,7 @@ class GameFragment : Fragment() {
     private fun setQuestion() {
         currentQuestion = questions[questionIndex]
         // randomize the answers into a copy of the array
-        //answers = currentQuestion.answers.toMutableList()
+        answers = currentQuestion.answers.toMutableList()
         // and shuffle them
         answers.shuffle()
         (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.title_android_trivia_question, questionIndex + 1, numQuestions)

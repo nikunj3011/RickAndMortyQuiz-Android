@@ -122,10 +122,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="232dp"
-                android:text="Previous"
+                android:text="@string/Previous"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/submitButton"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintHorizontal_bias="0.426"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/submitButton" />
 
             <Button
                 android:id="@+id/button2"
@@ -133,20 +135,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="44dp"
                 android:layout_marginBottom="232dp"
-                android:text="Next"
+                android:text="@string/Next"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="85dp"
-                android:layout_height="31dp"
-                android:text="Score: 2"
-                app:layout_constraintBottom_toTopOf="@+id/submitButton"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/questionRadioGroup"
-                app:layout_constraintVertical_bias="0.59" />
+                app:layout_constraintTop_toTopOf="@+id/submitButton" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 </layout>

@@ -15,18 +15,18 @@
   -->
 
 <resources>
-    <string name="app_name">Android Trivia</string>
+    <string name="app_name">Quiz Time</string>
     <string name="game_over">Game Over</string>
     <string name="try_again">Try Again?</string>
     <string name="position">Position</string>
     <string name="select_an_avatar">Select an Avatar</string>
-    <string name="android_trivia">Android Trivia</string>
+    <string name="android_trivia">Quiz Time</string>
     <string name="about_text">Rick and Morty quiz will help you of important concepts you have learned watching rick and morty. /n The show revolves around the adventures of the members of the Smith household, which consists of parents Jerry and Beth, their children Summer and Morty, and Beth\'s father, Rick Sanchez, who lives with them as a guest. According to Justin Roiland, the family lives outside of Seattle, Washington. The adventures of Rick and Morty, however, take place across an infinite number of realities, with the characters travelling to other planets and dimensions through portals and Ricks flying car. Rick is an eccentric and alcoholic mad scientist, who eschews many ordinary conventions such as school, marriage, love, and family. He frequently goes on adventures with his 14-year-old grandson, Morty, a kind-hearted but easily distressed boy, whose naive but grounded moral compass plays counterpoint to Rick\'s Machiavellian ego. Mortys 17-year-old sister, Summer, is a more conventional teenager who worries about improving her status among her peers and sometimes follows Rick and Morty on their adventures. The kids mother, Beth, is a generally level-headed person and assertive force in the household, though self-conscious about her professional role as a horse surgeon. She is dissatisfied with her marriage to Jerry, a simple-minded and insecure person, who disapproves of Ricks influence over his family.</string>
     <string name="rules_text">Select the answer from the options given. Each time you get an answer correct, you advance to the next question.\n\nIf you get the answer wrong, your game ends! You can return to the title screen using up or back from within the game screen, and this will also end your game.</string>
     <string name="rules">Rules</string>
     <string name="about">About</string>
     <string name="trivia_hint">Trivia Hint</string>
-    <string name="title_android_trivia_question">Android Trivia (%1$d/%2$d)</string>
+    <string name="title_android_trivia_question">Quiz Time</string>
     <string name="title_about_trivia">About Trivia</string>
     <string name="title_trivia_rules">Trivia Rules</string>
     <string name="share_success_text">I mastered #UdacityAndroidTrivia with %1$d/%2$d correct questions!</string>
@@ -57,5 +57,7 @@
     <string name="question_18">The Episode \'Something Ricked This Way\' Is A Parody Of An Edgar Allen Poe Poem</string>
     <string name="question_19">Rick\'s Hivemind Ex-Lover Is Called Purity?</string>
     <string name="question_20">The Conjoint Twin That Simultaneously Host The News &amp;v A Cooking Show Are Calle Michael &amp; Pichael?</string>
+    <string name="Next"><![CDATA[>]]></string>
+    <string name="Previous"><![CDATA[<]]></string>
 
 </resources>
