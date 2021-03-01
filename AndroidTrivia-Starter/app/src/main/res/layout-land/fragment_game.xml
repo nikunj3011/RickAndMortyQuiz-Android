@@ -38,8 +38,8 @@
 
             <ImageView
                 android:id="@+id/questionImage"
-                android:layout_width="0dp"
-                android:layout_height="@dimen/image_header_height"
+                android:layout_width="703dp"
+                android:layout_height="107dp"
                 android:layout_marginStart="@dimen/horizontal_margin"
                 android:layout_marginTop="@dimen/vertical_margin"
                 android:layout_marginEnd="@dimen/horizontal_margin"
@@ -122,16 +122,18 @@
 
             <Button
                 android:id="@+id/submitButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="116dp"
+                android:layout_height="58dp"
                 android:layout_marginStart="@dimen/question_horizontal_margin"
                 android:layout_marginTop="@dimen/vertical_margin"
                 android:layout_marginEnd="@dimen/question_horizontal_margin"
                 android:text="@string/submit_button"
                 android:textSize="@dimen/button_text_size"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/questionRadioGroup" />
+                app:layout_constraintTop_toBottomOf="@+id/questionRadioGroup"
+                app:layout_constraintVertical_bias="0.0" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 </layout>

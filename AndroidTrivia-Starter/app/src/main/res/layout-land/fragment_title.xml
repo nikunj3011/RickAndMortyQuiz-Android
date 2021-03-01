@@ -45,14 +45,13 @@
 
         <ImageView
             android:id="@+id/titleImage"
-            android:layout_width="497dp"
-            android:layout_height="265dp"
+            android:layout_width="577dp"
+            android:layout_height="268dp"
             android:layout_marginStart="@dimen/horizontal_margin"
             android:layout_marginEnd="@dimen/horizontal_margin"
             android:scaleType="fitCenter"
             app:layout_constraintBottom_toTopOf="@+id/playButton"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.461"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/rnm01" />
