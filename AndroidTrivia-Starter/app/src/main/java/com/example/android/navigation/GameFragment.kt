@@ -99,11 +99,6 @@ class GameFragment : Fragment() {
                                 .navigate(GameFragmentDirections
                                         .actionGameFragmentToGameWonFragment(numQuestions, questionIndex))
                     }
-                } else {
-                    // Game over! A wrong answer sends us to the gameOverFragment.
-                    // Using directions to navigate to the GameOverFragment
-                    view.findNavController()
-                            .navigate(GameFragmentDirections.actionGameFragmentToGameOverFragment())
                 }
             }
         }
