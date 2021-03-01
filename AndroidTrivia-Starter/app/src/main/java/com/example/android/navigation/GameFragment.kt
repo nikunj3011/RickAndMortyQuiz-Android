@@ -28,35 +28,39 @@ import com.example.android.navigation.databinding.FragmentGameBinding
 
 class GameFragment : Fragment() {
     data class Question(
-            val text: String,
-            val answers: List<String>)
+            val text: Int,
+            val answers: Boolean)
 
     // The first answer is the correct one.  We randomize the answers before showing the text.
     // All questions must have four answers.  We'd want these to contain references to string
     // resources so we could internationalize. (Or better yet, don't define the questions in code...)
     private val questions: MutableList<Question> = mutableListOf(
-            Question(text = "The Rick &amp; Morty That The Show Follows Are Originally From Dimension C-173",
-                    answers = listOf("True","False")),
-            Question(text = "Jerry\\'s Station Wagon Is Based On The Car From National Lampoon\\'s Vacation?",
-                    answers = listOf("True","False")),
-            Question(text = "Rick &amp; Morty Have Appeared In The Opening Title Screen Of The Simpsons?",
-                    answers = listOf("True","False")),
-            Question(text = "Jaguar From \\'Pickle Rick\\' Had His Own Spin Off Show With Adult Swim?",
-                    answers = listOf("True","False")),
-            Question(text = "Two Brothers\\' Is The First Show Rick &amp; Morty Watch On Inter-Dimensional Cable?",
-                    answers = listOf("True","False")),
-            Question(text = "According To Dan Harmon, A Schmeckle Is Worth \$148?",
-                    answers = listOf("True","False")),
-            Question(text = "The Bloomflark Is The Universal Currency For The Galactic Federation?",
-                    answers = listOf("True","False")),
-            Question(text = "When Bird-Person Is \\'Reborn\\' He Is Dubbed Phoenix-Bird?",
-                    answers = listOf("True","False"))
+            Question(R.string.question_1, false),
+            Question(R.string.question_2, true),
+            Question(R.string.question_3, true),
+            Question(R.string.question_4, false),
+            Question(R.string.question_5, false),
+            Question(R.string.question_6, true),
+            Question(R.string.question_7, false),
+            Question(R.string.question_8, true),
+            Question(R.string.question_9, false),
+            Question(R.string.question_10, false),
+            Question(R.string.question_11, false),
+            Question(R.string.question_12, true),
+            Question(R.string.question_13, false),
+            Question(R.string.question_14, true),
+            Question(R.string.question_15, false),
+            Question(R.string.question_16, false),
+            Question(R.string.question_17, true),
+            Question(R.string.question_18, false),
+            Question(R.string.question_19, false),
+            Question(R.string.question_20, true)
     )
 
 
 
     lateinit var currentQuestion: Question
-    lateinit var answers: MutableList<String>
+    lateinit var answers: MutableList<Question>
     private var questionIndex = 0
     private val numQuestions = 2//Math.min((questions.size + 1) / 2, 3)
 
@@ -85,7 +89,7 @@ class GameFragment : Fragment() {
                 }
                 // The first answer in the original question is always the correct one, so if our
                 // answer matches, we have the correct answer.
-                if (answers[answerIndex] == currentQuestion.answers[0]) {
+                if (true) {
                     questionIndex++
                     // Advance to the next question
                     if (questionIndex < numQuestions) {
@@ -117,7 +121,7 @@ class GameFragment : Fragment() {
     private fun setQuestion() {
         currentQuestion = questions[questionIndex]
         // randomize the answers into a copy of the array
-        answers = currentQuestion.answers.toMutableList()
+        //answers = currentQuestion.answers.toMutableList()
         // and shuffle them
         answers.shuffle()
         (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.title_android_trivia_question, questionIndex + 1, numQuestions)
