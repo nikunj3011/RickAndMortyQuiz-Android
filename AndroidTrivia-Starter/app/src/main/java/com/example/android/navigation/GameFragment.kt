@@ -28,28 +28,52 @@ import com.example.android.navigation.databinding.FragmentGameBinding
 
 class GameFragment : Fragment() {
     data class Question(
-            val text: String,
+            val text: Int,
             val answers: List<String>)
 
     // The first answer is the correct one.  We randomize the answers before showing the text.
     // All questions must have four answers.  We'd want these to contain references to string
     // resources so we could internationalize. (Or better yet, don't define the questions in code...)
     private val questions: MutableList<Question> = mutableListOf(
-            Question(text = "The Rick &amp; Morty That The Show Follows Are Originally From Dimension C-173",
+            Question(R.string.question_1,
                     answers = listOf("True","False")),
-            Question(text = "Jerry\\'s Station Wagon Is Based On The Car From National Lampoon\\'s Vacation?",
+            Question(R.string.question_2,
                     answers = listOf("True","False")),
-            Question(text = "Rick &amp; Morty Have Appeared In The Opening Title Screen Of The Simpsons?",
+            Question(R.string.question_3,
                     answers = listOf("True","False")),
-            Question(text = "Jaguar From \\'Pickle Rick\\' Had His Own Spin Off Show With Adult Swim?",
+            Question(R.string.question_4,
                     answers = listOf("True","False")),
-            Question(text = "Two Brothers\\' Is The First Show Rick &amp; Morty Watch On Inter-Dimensional Cable?",
+            Question(R.string.question_5,
                     answers = listOf("True","False")),
-            Question(text = "According To Dan Harmon, A Schmeckle Is Worth \$148?",
+            Question(R.string.question_6,
                     answers = listOf("True","False")),
-            Question(text = "The Bloomflark Is The Universal Currency For The Galactic Federation?",
+            Question(R.string.question_7,
                     answers = listOf("True","False")),
-            Question(text = "When Bird-Person Is \\'Reborn\\' He Is Dubbed Phoenix-Bird?",
+            Question(R.string.question_8,
+                    answers = listOf("True","False")),
+            Question(R.string.question_9,
+                    answers = listOf("True","False")),
+            Question(R.string.question_10,
+                    answers = listOf("True","False")),
+            Question(R.string.question_11,
+                    answers = listOf("True","False")),
+            Question(R.string.question_12,
+                    answers = listOf("True","False")),
+            Question(R.string.question_13,
+                    answers = listOf("True","False")),
+            Question(R.string.question_14,
+                    answers = listOf("True","False")),
+            Question(R.string.question_15,
+                    answers = listOf("True","False")),
+            Question(R.string.question_16,
+                    answers = listOf("True","False")),
+            Question(R.string.question_17,
+                    answers = listOf("True","False")),
+            Question(R.string.question_18,
+                    answers = listOf("True","False")),
+            Question(R.string.question_19,
+                    answers = listOf("True","False")),
+            Question(R.string.question_20,
                     answers = listOf("True","False"))
     )
 
